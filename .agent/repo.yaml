@@ -1,0 +1,14 @@
+version: 1
+
+pre_push_checks:
+  - name: syntax-check
+    command: python3 -m py_compile $(git diff --name-only HEAD | grep '\.py$' || echo /dev/null)
+    timeout_seconds: 30
+    allow_failure: true
+
+conventions:
+  commit_style: conventional
+  language_primary: python
+
+read_first:
+  - README.md
