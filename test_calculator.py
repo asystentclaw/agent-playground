@@ -1,6 +1,6 @@
 import unittest
 
-from calculator import add, subtract, multiply, divide
+from calculator import add, divide, multiply, subtract
 
 
 class CalculatorTests(unittest.TestCase):
@@ -21,5 +21,5 @@ class CalculatorTests(unittest.TestCase):
             divide(1, 0)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
